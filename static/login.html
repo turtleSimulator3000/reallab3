@@ -1,0 +1,45 @@
+<!-- @format -->
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+  </head>
+  <body>
+    <script>
+      visible = False;
+      function toggleVisibility(event) {
+        const input = document.getElementById("password");
+        const togg = document.getElementById("togg");
+        //console.log("ran");
+        // When an input is checked, or whatever...
+        if (input.getAttribute("type") == "password") {
+          input.setAttribute("type", "text");
+          togg.innerHTML = "&#128275";
+        } else {
+          input.setAttribute("type", "password");
+          togg.innerHTML = "&#128274";
+        }
+
+        return;
+      }
+    </script>
+    <form action="/login" method="POST">
+      <label>Name:</label><br />
+      <input name="username" /><br />
+      <label>Password:</label><br />
+      <input name="password" type="password" id="password" />
+      <button type="button" id="togg" onclick="toggleVisibility(event)">
+        &#128274;
+      </button>
+      <br />
+      <label for="log">Login or Sign up:</label>
+
+      <select name="mode" id="log">
+        <option value="login">login</option>
+        <option value="register">register</option>
+      </select>
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
