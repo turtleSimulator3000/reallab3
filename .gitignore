@@ -1,0 +1,37 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Editor and OS files
+.DS_Store
+._*
+._.DS_Store
+.vscode/
+.idea/
+
+# Flask / local runtime files
+instance/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Redis/local data if created
+.redis/
+*.rdb
+
+# Optional: generated files
+coverage.xml
+htmlcov/
